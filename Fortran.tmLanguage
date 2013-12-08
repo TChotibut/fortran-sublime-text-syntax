@@ -216,23 +216,6 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.fortran</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(?i)^\s*(module\s+procedure)\s+(\w+)</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.type.fortran</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
 					<string>entity.name.type.fortran</string>
 				</dict>
 			</dict>
@@ -286,17 +269,14 @@
 					<key>name</key>
 					<string>storage.type.type.fortran</string>
 				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.fortran</string>
-				</dict>
 			</dict>
 			<key>match</key>
 			<string>(?i)^\s*(end)\s*(program|module|function|subroutine)(?:\s+(\w+))?</string>
 		</dict>
 		<dict>
-			<key>captures</key>
+			<key>begin</key>
+			<string>(?i)\b(interface)\b</string>
+			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict>
@@ -304,11 +284,9 @@
 					<string>storage.type.interface.fortran</string>
 				</dict>
 			</dict>
-			<key>match</key>
-			<string>(?i)\b(interface)</string>
-		</dict>
-		<dict>
-			<key>captures</key>
+			<key>end</key>
+			<string>(?i)^\s*(end)\s*(interface)</string>
+			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict>
@@ -321,8 +299,39 @@
 					<string>storage.type.interface.fortran</string>
 				</dict>
 			</dict>
-			<key>match</key>
-			<string>(?i)^\s*(end)\s*(interface)</string>
+			<key>name</key>
+			<string>meta.interface.fortran</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.type.fortran</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(?i)^\s*(module\s+procedure)\s+(\w+)</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.function.fortran</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(?i)\b(program|module|function|subroutine)\s+(\w+)</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>match</key>

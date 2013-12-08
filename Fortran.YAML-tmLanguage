@@ -67,10 +67,6 @@ patterns:
   match: (?i)\b(d?(sqrt|abs|erf|log|exp))(?=\s*\()
 - name: support.function.fortran
   match: (?i)\b(trim|adjustl|dot_product|all|any|reshape|transpose)(?=\s*\()
-- match: (?i)^\s*(module\s+procedure)\s+(\w+)
-  captures:
-    '1': {name: storage.type.type.fortran}
-    '2': {name: entity.name.function.fortran}
 - match: (?i)(type)\((\w+)\)
   captures:
     '1': {name: storage.type.type.fortran}
@@ -87,13 +83,22 @@ patterns:
   captures:
     '1': {name: keyword.control.fortran}
     '2': {name: storage.type.type.fortran}
-    '3': {name: entity.name.function.fortran}
-- match: (?i)\b(interface)
-  captures:
+    # '3': {name: entity.name.function.fortran}
+- name: meta.interface.fortran
+  begin: (?i)\b(interface)\b
+  beginCaptures:
     '1': {name: storage.type.interface.fortran}
-- match: (?i)^\s*(end)\s*(interface)
-  captures:
+  end: (?i)^\s*(end)\s*(interface)
+  endCaptures:
     '1': {name: keyword.control.fortran}
     '2': {name: storage.type.interface.fortran}
+  patterns:
+    - match: (?i)^\s*(module\s+procedure)\s+(\w+)
+      captures:
+        '1': {name: storage.type.type.fortran}
+    - match: (?i)\b(program|module|function|subroutine)\s+(\w+)
+      captures:
+        '1': {name: storage.type.function.fortran}
+    - include: $self
 - name: support.constant
   match: \(|\)|,
