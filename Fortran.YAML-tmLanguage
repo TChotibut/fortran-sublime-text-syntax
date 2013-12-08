@@ -18,7 +18,7 @@ patterns:
 - name: constant.language.fortran
   match: (?i)\.(true|false)\.
 - name: keyword.other.fortran
-  match: (?i)\b(use|only|contains|call)\b
+  match: (?i)\b(use|only|contains|call|result)\b
 - match: (?i)\b(len|kind)\s*\=
   captures:
     '1': {name: keyword.other.fortran}
@@ -35,18 +35,14 @@ patterns:
 - name: keyword.operator.arithmetic.fortran
   match: (?i)\+|\-|\*|\*\*|/
 - name: keyword.operator.other.fortran
-  match: (?i)\=|\=>|(\:)|(\:\:)|//
+  match: (?i)\=|\=>|(\:)|(\:\:)|//|%
 - name: string.quoted.double.fortran
   match: (?i)\"([^"]*)\"
 - name: string.quoted.single.fortran
   match: (?i)\'([^']*)\'
-- match: (?i)\w+[\)\s]*(%)\s*\w+
+- match: (?i)(?<=intent\()(in|out|inout)
   captures:
-    '1': {name: keyword.operator.access.fortran}
-- match: (?i)(intent)\((in|out|inout)\)
-  captures:
-    '1': {name: storage.modifier.fortran}
-    '2': {name: keyword.other.fortran}
+    '1': {name: keyword.other.fortran}
 - match: (?i)(&)\s*\n
   captures:
     '1': {name: keyword.other.fortran}
@@ -56,7 +52,7 @@ patterns:
 - name: storage.modifier.fortran
   match: (?i)\b(implicit|none)\b
 - name: storage.modifier.fortran
-  match: (?i)\b(private|public|parameter|optional|allocatable|dimension|pointer|target)\b
+  match: (?i)\b(private|public|parameter|optional|allocatable|dimension|pointer|target|intent)\b
 - name: storage.modifier.fortran
   match: (?i)\b(recursive|pure|elemental)\b
 - name: storage.type.fortran
@@ -94,9 +90,6 @@ patterns:
     '1': {name: keyword.control.fortran}
     '2': {name: storage.type.type.fortran}
     '3': {name: entity.name.function.fortran}
-- match: (?i)(result)\(\w+\)
-  captures:
-    '1': {name: keyword.other.fortran}
 - match: (?i)\b(interface)
   captures:
     '1': {name: storage.type.interface.fortran}
