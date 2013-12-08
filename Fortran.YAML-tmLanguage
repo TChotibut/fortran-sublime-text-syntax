@@ -2,15 +2,13 @@
 ---
 name: Fortran
 scopeName: source.fortran
-fileTypes: [f,f77,f90,f95,F,F77,F90,F95]
+fileTypes: [f90,f95,F90,F95]
 uuid: 70ebde89-7743-4e5a-96ce-8b0be2ca6025
 
 patterns:
 
 - name: comment.line.exclamation-mark.fortran
   match: (?i)\!.*$
-- name: comment.line.c.fortran
-  match: (?i)(?i)^c.*$
 - name: constant.numeric.float.fortran
   match: (?i)\b\d+\.\d*([de][+-]?\d+)?\b
 - name: constant.numeric.integer.fortran

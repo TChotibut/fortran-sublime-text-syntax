@@ -1,0 +1,11 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Fortran fixed
+scopeName: source.fortran.fixed
+fileTypes: [f,F]
+uuid: 5168ec32-2ac4-4f5a-badf-e245f184ac4b
+
+patterns:
+- include: source.fortran
+- name: comment.line.c.fortran.fixed
+  match: (?i)^c.*$
