@@ -97,3 +97,5 @@ patterns:
   captures:
     '1': {name: keyword.control.fortran}
     '2': {name: storage.type.interface.fortran}
+- name: support.constant
+  match: \(|\)|,
