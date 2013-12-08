@@ -1,0 +1,6 @@
+fortran-sublime-text-syntax
+===========================
+
+Fortran syntax definition for Sublime Text editor
+
+It is not intended as a general package (yet) and contains just the language constructs I personally use.
