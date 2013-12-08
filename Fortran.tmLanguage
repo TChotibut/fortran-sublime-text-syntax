@@ -49,7 +49,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(use|only|contains|call)\b</string>
+			<string>(?i)\b(use|only|contains|call|result)\b</string>
 			<key>name</key>
 			<string>keyword.other.fortran</string>
 		</dict>
@@ -103,7 +103,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\=|\=&gt;|(\:)|(\:\:)|//</string>
+			<string>(?i)\=|\=&gt;|(\:)|(\:\:)|//|%</string>
 			<key>name</key>
 			<string>keyword.operator.other.fortran</string>
 		</dict>
@@ -125,28 +125,11 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.access.fortran</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(?i)\w+[\)\s]*(%)\s*\w+</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.modifier.fortran</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
 					<string>keyword.other.fortran</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)(intent)\((in|out|inout)\)</string>
+			<string>(?i)(?&lt;=intent\()(in|out|inout)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -180,7 +163,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(private|public|parameter|optional|allocatable|dimension|pointer|target)\b</string>
+			<string>(?i)\b(private|public|parameter|optional|allocatable|dimension|pointer|target|intent)\b</string>
 			<key>name</key>
 			<string>storage.modifier.fortran</string>
 		</dict>
@@ -328,18 +311,6 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.fortran</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(?i)(result)\(\w+\)</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
 					<string>storage.type.interface.fortran</string>
 				</dict>
 			</dict>
@@ -362,6 +333,12 @@
 			</dict>
 			<key>match</key>
 			<string>(?i)^\s*(end)\s*(interface)</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\(|\)|,</string>
+			<key>name</key>
+			<string>support.constant</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
