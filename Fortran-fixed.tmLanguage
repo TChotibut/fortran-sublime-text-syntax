@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>f</string>
+		<string>F</string>
+	</array>
+	<key>name</key>
+	<string>Fortran fixed</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>source.fortran</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)^c.*$</string>
+			<key>name</key>
+			<string>comment.line.c.fortran.fixed</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.fortran.fixed</string>
+	<key>uuid</key>
+	<string>5168ec32-2ac4-4f5a-badf-e245f184ac4b</string>
+</dict>
+</plist>

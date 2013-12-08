@@ -4,12 +4,8 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>f</string>
-		<string>f77</string>
 		<string>f90</string>
 		<string>f95</string>
-		<string>F</string>
-		<string>F77</string>
 		<string>F90</string>
 		<string>F95</string>
 	</array>
@@ -25,13 +21,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)(?i)^c.*$</string>
-			<key>name</key>
-			<string>comment.line.c.fortran</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i)\b\d+\.\d*(d[+-]?\d+)?\b</string>
+			<string>(?i)\b\d+\.\d*([de][+-]?\d+)?\b</string>
 			<key>name</key>
 			<string>constant.numeric.float.fortran</string>
 		</dict>
@@ -129,7 +119,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i)(?&lt;=intent\()(in|out|inout)</string>
+			<string>(?i)(?&lt;=\()(in|out|inout)(?=\))</string>
 		</dict>
 		<dict>
 			<key>captures</key>
