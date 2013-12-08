@@ -58,7 +58,7 @@ patterns:
 - name: support.function.fortran
   match: (?i)\b(present|allocate|deallocate|write|size|nullify|open|close|inquire)(?=\s*\()
 - name: support.function.fortran
-  match: (?i)\b(print)
+  match: (?i)\b(print)\b
 - name: support.function.fortran
   match: (?i)\b(selected_real_kind|allocated|shape)(?=\s*\()
 - name: support.function.fortran

@@ -177,7 +177,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(print)</string>
+			<string>(?i)\b(print)\b</string>
 			<key>name</key>
 			<string>support.function.fortran</string>
 		</dict>
