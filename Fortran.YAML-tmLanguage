@@ -12,7 +12,7 @@ patterns:
 - name: comment.line.c.fortran
   match: (?i)(?i)^c.*$
 - name: constant.numeric.float.fortran
-  match: (?i)\b\d+\.\d*(d[+-]?\d+)?\b
+  match: (?i)\b\d+\.\d*([de][+-]?\d+)?\b
 - name: constant.numeric.integer.fortran
   match: (?i)\b([1-9][0-9]*|0)\b
 - name: constant.language.fortran
@@ -40,7 +40,7 @@ patterns:
   match: (?i)\"([^"]*)\"
 - name: string.quoted.single.fortran
   match: (?i)\'([^']*)\'
-- match: (?i)(?<=intent\()(in|out|inout)
+- match: (?i)(?<=\()(in|out|inout)(?=\))
   captures:
     '1': {name: keyword.other.fortran}
 - match: (?i)(&)\s*\n
