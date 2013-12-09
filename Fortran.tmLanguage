@@ -256,6 +256,42 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(?i)\b(present|allocate|deallocate|write|size|nullify|open|close|inquire)(?=\s*\()</string>
+			<key>name</key>
+			<string>support.function.fortran</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(print)\b</string>
+			<key>name</key>
+			<string>support.function.fortran</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(selected_real_kind|allocated|shape)(?=\s*\()</string>
+			<key>name</key>
+			<string>support.function.fortran</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(sum|product|count|matmul|merge|ceiling|cmplx|real)(?=\s*\()</string>
+			<key>name</key>
+			<string>support.function.fortran</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(d?(sqrt|abs|erf|log|exp))(?=\s*\()</string>
+			<key>name</key>
+			<string>support.function.fortran</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(trim|adjustl|dot_product|all|any|reshape|transpose)(?=\s*\()</string>
+			<key>name</key>
+			<string>support.function.fortran</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(?i)\b(implicit|none)\b</string>
 			<key>name</key>
 			<string>storage.modifier.fortran</string>
@@ -294,42 +330,6 @@
 			</dict>
 			<key>match</key>
 			<string>(?i)^\s*(end)\s*(type)</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i)\b(present|allocate|deallocate|write|size|nullify|open|close|inquire)(?=\s*\()</string>
-			<key>name</key>
-			<string>support.function.fortran</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i)\b(print)\b</string>
-			<key>name</key>
-			<string>support.function.fortran</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i)\b(selected_real_kind|allocated|shape)(?=\s*\()</string>
-			<key>name</key>
-			<string>support.function.fortran</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i)\b(sum|product|count|matmul|merge|ceiling|cmplx)(?=\s*\()</string>
-			<key>name</key>
-			<string>support.function.fortran</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i)\b(d?(sqrt|abs|erf|log|exp))(?=\s*\()</string>
-			<key>name</key>
-			<string>support.function.fortran</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i)\b(trim|adjustl|dot_product|all|any|reshape|transpose)(?=\s*\()</string>
-			<key>name</key>
-			<string>support.function.fortran</string>
 		</dict>
 		<dict>
 			<key>match</key>
