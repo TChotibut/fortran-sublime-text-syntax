@@ -12,6 +12,15 @@
 		<string>^\s*(end\s*(do|if|subroutine|function|select|interface)|else|elseif)\b</string>
 		<key>increaseIndentPattern</key>
 		<string>(^\s*(subroutine|do|if|select|else|elseif|interface)\b|(^.*\b(function)\b.*\())</string>
+		<key>shellVariables</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>TM_COMMENT_START</string>
+				<key>value</key>
+				<string>! </string>
+			</dict>
+		</array>
 	</dict>
 	<key>uuid</key>
 	<string>81299d74-130f-478e-a956-0d72adf3097a</string>
