@@ -315,7 +315,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(sum|product|count|matmul|merge|ceiling)(?=\s*\()</string>
+			<string>(?i)\b(sum|product|count|matmul|merge|ceiling|cmplx)(?=\s*\()</string>
 			<key>name</key>
 			<string>support.function.fortran</string>
 		</dict>

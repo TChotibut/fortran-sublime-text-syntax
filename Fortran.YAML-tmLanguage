@@ -93,7 +93,7 @@ patterns:
 - name: support.function.fortran
   match: (?i)\b(selected_real_kind|allocated|shape)(?=\s*\()
 - name: support.function.fortran
-  match: (?i)\b(sum|product|count|matmul|merge|ceiling)(?=\s*\()
+  match: (?i)\b(sum|product|count|matmul|merge|ceiling|cmplx)(?=\s*\()
 - name: support.function.fortran
   match: (?i)\b(d?(sqrt|abs|erf|log|exp))(?=\s*\()
 - name: support.function.fortran
