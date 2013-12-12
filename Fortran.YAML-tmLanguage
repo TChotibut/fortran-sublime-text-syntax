@@ -48,7 +48,7 @@ patterns:
   captures:
     '1': {name: keyword.other.fortran}
 - name: keyword.control.fortran
-  match: (?i)\b(if|then|else|endif|select|case|default|endselect|do|while|enddo|end)\b
+  match: (?i)\b(if|then|else|endif|select|case|default|endselect|do|while|enddo|end|where)\b
 - name: keyword.control.fortran
   match: (?i)\b(|exit|cycle|return|stop|go\s+to|end|forall|endforall)\b
 - name: keyword.operator.logical.fortran

@@ -166,7 +166,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(if|then|else|endif|select|case|default|endselect|do|while|enddo|end)\b</string>
+			<string>(?i)\b(if|then|else|endif|select|case|default|endselect|do|while|enddo|end|where)\b</string>
 			<key>name</key>
 			<string>keyword.control.fortran</string>
 		</dict>
